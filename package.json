@@ -1,0 +1,30 @@
+{
+  "name": "MapDemo",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "android-build-debug": "cd android/ && gradlew assembleDebug",
+    "android-clean": "cd android && gradlew clean",
+    "android-bundle": "react-native bundle --platform android --dev false --entry-file ./index.js --bundle-output ./android/app/src/main/assets/index.android.bundle --sourcemap-output ./android/app/src/main/assets/index.android.map --assets-dest ./android/app/src/main/res/"
+  },
+  "dependencies": {
+    "@mapbox/togeojson": "^0.16.0",
+    "react": "16.6.0-alpha.8af6728",
+    "react-native": "0.57.3",
+    "react-native-fs": "^2.11.18",
+    "react-native-maps": "^0.22.0",
+    "react-navigation": "^2.18.0",
+    "xmldom": "^0.1.27"
+  },
+  "devDependencies": {
+    "babel-jest": "23.6.0",
+    "jest": "23.6.0",
+    "metro-react-native-babel-preset": "0.48.1",
+    "react-test-renderer": "16.6.0-alpha.8af6728"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
